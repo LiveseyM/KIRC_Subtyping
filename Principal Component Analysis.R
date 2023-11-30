@@ -2,8 +2,8 @@
 library(factoextra)
 library(FactoMineR)
 
-# Input gene and expression data with Cluster values in last column
-# Samples as columns and genes as rows
+# Input expression data with Cluster number in last column - match to sample
+# Samples as rows and genes as columns
 exp <- read.csv2("Top48_genes.csv", header = TRUE, row.names = 1, sep = ";", dec = ".")
 exp[1:3,1:3]
 exp$Cluster <- as.factor(exp$Cluster)

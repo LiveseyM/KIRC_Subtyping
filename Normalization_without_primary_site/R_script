@@ -1,0 +1,12 @@
+setwd(path)
+
+library(tidyverse)
+library(magrittr)
+
+early <- read_csv("data/early.csv") |> column_to_rownames(var = "gene")
+advanced <- read_csv("data/advanced.csv") |> column_to_rownames(var = "gene")
+
+mi <- 1/ncol(early) * rowSums(early)
+L <- log(advanced/mi)
+
+write.csv(L, file = "output/L.csv")

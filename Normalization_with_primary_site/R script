@@ -40,7 +40,7 @@ mult_ps_ge <- function(primary_site_vector,
            setNames(cols))
 }
 
-# Function to construct the 3D matrix X and Y
+# Function to construct the 3D matrices X and Y
 three_dim_matrix <- function(primary_site_matrix,
                              gene_expression_matrix) {
   X <- NULL
